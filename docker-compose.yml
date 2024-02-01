@@ -1,0 +1,17 @@
+services:
+  web:
+    build: ./portfolio
+    container_name: web
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - "12000:3000"
+    volumes:
+      - ./portfolio:/app/
+    networks:
+      - backend
+    tty: true
+    stdin_open: true
+
+networks:
+  backend:
+
