@@ -9,10 +9,9 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        NavBar: "#FAF0D7",
+        Bar: "#FAF0D7",
         TextBlack: "#3D3B40",
         BackGrand: "#EEEDEB",
-        
       },
     },
   },
