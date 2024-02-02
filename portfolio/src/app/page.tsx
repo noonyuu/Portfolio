@@ -54,8 +54,8 @@ export default function Home() {
 
           {/* works */}
           <h2 className="mt-16 mb-8 text-TextBlack text-2xl tracking-widest">~~Works~~</h2>
-          <div className="w-[60%] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <div className="">
+          <div className="w-[60%] grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:w-[50%]">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -85,7 +85,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -100,7 +100,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -130,7 +130,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
