@@ -2,8 +2,13 @@ import Image from "next/image";
 import icon from "../../public/rabbit.jpg";
 import github from "../../public/github.svg";
 import x from "../../public/x.jpg";
+import Works from "./components/works/page";
+import { Work, WorkItem } from "../works";
 
 export default function Home() {
+  const works = new Work();
+  const list: WorkItem[] = works.View();
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-Bar text-TextBlack fixed flex items-center justify-between w-full h-16 z-50">
@@ -55,22 +60,12 @@ export default function Home() {
           {/* works */}
           <h2 className="mt-16 mb-8 text-TextBlack text-2xl tracking-widest">~~Works~~</h2>
           <div className="w-[60%] grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:w-[50%]">
-            <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">ムーブメントアーム</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div>
+            {list.map((item, index) => (
+              <Works key={index} image={item.image.src} title={item.title} detail={item.detail} skills={item.skills} />
 
-            <div className="flex justify-center">
+))}
+
+            {/* <div className="flex justify-center">
               <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <Image src={github} alt={""} className="w-52 h-32"></Image>
@@ -143,7 +138,7 @@ export default function Home() {
                   <p className="text-black">建設中</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
