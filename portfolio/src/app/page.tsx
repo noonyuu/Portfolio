@@ -61,84 +61,8 @@ export default function Home() {
           <h2 className="mt-16 mb-8 text-TextBlack text-2xl tracking-widest">~~Works~~</h2>
           <div className="w-[60%] grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:w-[50%]">
             {list.map((item, index) => (
-              <Works key={index} image={item.image.src} title={item.title} detail={item.detail} skills={item.skills} />
-
-))}
-
-            {/* <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">駅ナビ</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">Cheifoon</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">SummarizeMe</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">Metal Dragon</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="w-52 h-56 bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
-                  <Image src={github} alt={""} className="w-52 h-32"></Image>
-                </a>
-                <div className="p-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-x font-bold tracking-tight text-gray-900">国会劇場</h5>
-                  </a>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                  <p className="text-black">建設中</p>
-                </div>
-              </div>
-            </div> */}
+              <Works key={index} image={item.image.src} title={item.title} detail={item.detail} skills={item.skills} member={item.member} />
+            ))}
           </div>
         </div>
       </main>

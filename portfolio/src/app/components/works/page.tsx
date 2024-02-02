@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Close from "../../../../public/close.svg"
+import Close from "../../../../public/close.svg";
 
-export default function Home({ image, title, detail, skills }: { image: string; title: string; detail: string; skills: Array<string> }) {
+export default function Home({ image, title, detail, skills, member }: { image: string; title: string; detail: string; skills: Array<string>; member: string }) {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -39,6 +39,7 @@ export default function Home({ image, title, detail, skills }: { image: string; 
               <Image src={Close} alt="" className="h-8 w-8"></Image>
             </button>
             <img src={image} alt="" className="w-full rounded-lg" />
+            <span>{member}</span>
             <h2 className="my-4 text-center">{title}</h2>
             <p>{detail}</p>
             <div className="mt-4">
