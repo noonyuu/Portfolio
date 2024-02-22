@@ -32,8 +32,11 @@ export default function Home() {
 
         <div className="flex flex-col items-center w-full h-full">
           {/* profile */}
-          <h2 className="mt-16 mb-8 text-TextBlack text-2xl tracking-widest">~~Profile~~</h2>
-          <div id="profile" className="bg-slate-50 relative flex justify-center w-3/4 h-56 rounded-lg shadow-lg md:w-3/5 lg:w-2/5">
+          {/* <div id="profile"> */}
+          <h2 id="profile" className=" mb-8 text-TextBlack text-2xl tracking-widest pt-16">
+            ~~Profile~~
+          </h2>
+          <div className="bg-slate-50 relative flex justify-center w-3/4 h-56 rounded-lg shadow-lg md:w-3/5 lg:w-2/5">
             <div className="w-full flex flex-row items-center justify-center space-x-16">
               <Image src={icon} alt="icon" objectFit="contain" className="w-28 h-28 rounded-full border" />
               <div className="flex flex-col items-center justify-center space-y-4">
@@ -42,7 +45,7 @@ export default function Home() {
                   <li className="text-sm text-TextBlack">しみず</li>
                 </ul>
                 <ul className="text-xs text-gray-400 text-center">
-                  <li>Job</li>
+                  <li>Jobs</li>
                   <li className="text-sm text-TextBlack">学生(26卒)</li>
                 </ul>
               </div>
@@ -56,18 +59,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* </div> */}
 
           {/* works */}
-          <h2 className="mt-16 mb-8 text-TextBlack text-2xl tracking-widest">~~Works~~</h2>
+          {/* <div id="works"> */}
+          <h2 id="works" className="mb-8 text-TextBlack text-2xl tracking-widest pt-16">
+            ~~Works~~
+          </h2>
           <div className="w-[60%] grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:w-[50%]">
             {list.map((item, index) => (
               <Works key={index} image={item.image.src} title={item.title} detail={item.detail} skills={item.skills} member={item.member} />
             ))}
           </div>
+          {/* </div> */}
         </div>
       </main>
       <footer className="bg-Bar text-TextBlack text-center mt-8">
-        <p>&copy; 2023 - Copyright noonyuu.</p>
+        <p>&copy; 2024 - Copyright noonyuu.</p>
       </footer>
     </div>
   );
